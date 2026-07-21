@@ -4,8 +4,16 @@
 class PrimeChecker {
   /**
    * Creates a PrimeChecker object.
+   *
+   * @param {number} number - The number to check for primality.
    */
-  constructor() {
+  constructor(number) {
+    /**
+     * The number to check.
+     * @type {number}
+     */
+    this.number = number;
+
     /**
      * The name of the operation.
      * @type {string}
@@ -14,16 +22,17 @@ class PrimeChecker {
   }
 
   /**
-   * Determines whether a given number is a prime number.
+   * Determines whether the stored number is a prime number.
    *
    * A prime number is a natural number greater than 1 that has no
    * positive divisors other than 1 and itself. This method uses
    * trial division up to the square root of the number for efficiency.
    *
-   * @param {number} number - The number to check for primality.
    * @returns {boolean} `true` if the number is prime, `false` otherwise.
    */
-  isPrime(number) {
+  isPrime() {
+    const { number } = this;
+
     if (number < 2) {
       return false;
     }
