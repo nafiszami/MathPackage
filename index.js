@@ -5,7 +5,7 @@ const Division = require('./Division');
 const PrimeChecker = require('./PrimeChecker');
 const MaxFinder = require('./MaxFinder');
 
-console.log('========== Math Package -- JU ==========\n');
+console.log('========== Math Package -- JU  ==========\n');
 
 // Addition
 const addition = new Addition(10, 20);
@@ -53,8 +53,6 @@ console.log('Is 18 Prime?', primeChecker2.isPrime());
 console.log('----------------------------------');
 
 // Max Finder
-const maxFinder = new MaxFinder(15, 30);
-console.log('Maximum (15, 30):', maxFinder.findMax());
 
 const maxFinder2 = new MaxFinder(15, 30, 25);
 console.log('Maximum (15, 30, 25):', maxFinder2.findMax());
