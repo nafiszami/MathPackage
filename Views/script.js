@@ -30,9 +30,10 @@ async function addition() {
         = data.result;
 }
 
-async function division() {
+
+async function multiplication() {
   const response = await fetch(
-    '/api/division',
+    '/api/multiplication',
     {
       method: 'POST',
 
@@ -42,27 +43,59 @@ async function division() {
 
       body: JSON.stringify({
         firstNumber: Number(
-          document.getElementById('div1').value,
+          document.getElementById('mul1').value,
         ),
 
         secondNumber: Number(
-          document.getElementById('div2').value,
+          document.getElementById('mul2').value,
         ),
 
-        thirdNumber: document.getElementById('div3').value
-          ? Number(
-              document.getElementById('div3').value,
-            )
-          : null,
+        thirdNumber: Number(
+          document.getElementById('mul3').value,
+        ),
       }),
     },
   );
 
   const data = await response.json();
 
-  document.getElementById('divisionResult').innerHTML
+  document.getElementById('mulResult').innerHTML
         = data.result;
 }
+
+async function subtraction() {
+  const response = await fetch(
+    '/api/subtraction',
+    {
+      method: 'POST',
+
+      headers: {
+        'Content-Type': 'application/json',
+      },
+
+      body: JSON.stringify({
+        firstNumber: Number(
+          document.getElementById('sub1').value,
+        ),
+
+        secondNumber: Number(
+          document.getElementById('sub2').value,
+        ),
+
+        thirdNumber: Number(
+          document.getElementById('sub3').value,
+        ),
+      }),
+    },
+  );
+
+  const data = await response.json();
+
+  document.getElementById('subResult').innerHTML
+        = data.result;
+}
+
+
 
 async function prime() {
   const response = await fetch(
