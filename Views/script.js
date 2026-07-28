@@ -53,3 +53,4 @@ async function prime() {
   document.getElementById('primeResult').innerHTML
         = data.result;
 }
+
