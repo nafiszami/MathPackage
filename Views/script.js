@@ -121,3 +121,34 @@ async function prime() {
         = data.result;
 }
 
+async function maxFinder() {
+  const response = await fetch(
+    '/api/maximum',
+    {
+      method: 'POST',
+
+      headers: {
+        'Content-Type': 'application/json',
+      },
+
+      body: JSON.stringify({
+        firstNumber: Number(
+          document.getElementById('max1').value,
+        ),
+
+        secondNumber: Number(
+          document.getElementById('max2').value,
+        ),
+
+        thirdNumber: Number(
+          document.getElementById('max3').value,
+        ),
+      }),
+    },
+  );
+
+  const data = await response.json();
+
+  document.getElementById('maxResult').innerHTML
+        = data.result;
+}
