@@ -1,40 +1,57 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <title>Math Package</title>
 </head>
-
 <body>
 
 <h1>Math Package</h1>
 
 <h2>Addition</h2>
-
 <input id="add1">
 <input id="add2">
 <input id="add3">
-
-<button onclick="addition()">
-Add
-</button>
-
+<button onclick="addition()">Add</button>
 <p id="addResult"></p>
 
 <hr>
+<h2>Subtraction</h2>
 
-<h2>Prime Checker</h2>
+<input id="sub1">
+<input id="sub2">
+<input id="sub3">
 
-<input id="prime">
-
-<button onclick="prime()">
-Check
+<button onclick="subtraction()">
+Subtract
 </button>
 
+<p id="subResult"></p>
+
+<hr>
+
+
+<h2>Multiplication</h2>
+<input id="mul1" placeholder="Number 1">
+<input id="mul2" placeholder="Number 2">
+<input id="mul3" placeholder="Number 3">
+<button onclick="multiplication()">Multiply</button>
+<p id="mulResult"></p>
+
+<hr>
+<h2>Division</h2>
+<input id="div1" placeholder="Dividend">
+<input id="div2" placeholder="Divisor">
+<input id="div3" placeholder="Third divisor (optional)">
+<button onclick="division()">
+  Divide
+</button>
+<p id="divisionResult"></p>
+<hr>
+<h2>Prime Checker</h2>
+<input id="prime">
+<button onclick="prime()">Check</button>
 <p id="primeResult"></p>
 
-
 <script src="script.js"></script>
-
 </body>
 </html>
