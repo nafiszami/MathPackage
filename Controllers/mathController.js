@@ -60,11 +60,15 @@ exports.multiply = (req, res) => {
 };
 
 exports.divide = (req, res) => {
-  const {
+  let {
     firstNumber,
     secondNumber,
     thirdNumber,
   } = req.body;
+
+  if (thirdNumber === '' || thirdNumber === undefined || thirdNumber === null) {
+    thirdNumber = null;
+  }
 
   const division = new Division(
     firstNumber,

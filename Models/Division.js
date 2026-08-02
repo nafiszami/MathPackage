@@ -40,7 +40,7 @@ class Division {
       throw new Error('Division by zero is not allowed.');
     }
 
-    if (this.thirdNumber === null) {
+    if (this.thirdNumber === null || this.thirdNumber === undefined || this.thirdNumber === '') {
       return this.dividend / this.divisor;
     }
 
